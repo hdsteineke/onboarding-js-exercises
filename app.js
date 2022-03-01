@@ -27,7 +27,7 @@ console.log(`areaOfTriangle(5, 10) === 25 : ${areaOfTriangle(5, 10) === 25}`);
 // return false if it is greater than 100
 function lessThan100(num1, num2) {
     if (num1 + num2 < 100)
-    return true;
+        return true;
     else return false;
 
 }
@@ -43,11 +43,11 @@ function getFormattedName(first_name, last_name, middle_name = '') {
     if (middle_name === '') {
         console.log(first_name + last_name);
 
-    return first_name + ' ' + last_name; 
+        return first_name + ' ' + last_name; 
     } else {
         return first_name + ' ' + middle_name + ' ' + last_name;
+    }
 }
-};
 console.log(
     `getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg': ${
         getFormattedName('Ruth', 'Ginsburg') === 'Ruth Ginsburg'
@@ -79,7 +79,7 @@ function daysInMonth(month) {
     } else if (month === 4) {
         return 30;
     } else if (month === 5) {
-        return 31
+        return 31;
     } else if (month === 6) {
         return 30;
     } else if (month === 7) {
@@ -94,6 +94,8 @@ function daysInMonth(month) {
         return 30;
     } else if (month === 12) {
         return 31;
+    } else if (month > 12 || month < 1) {
+        return 'Not a valid month';
     }
     
 }
